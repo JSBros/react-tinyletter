@@ -5,23 +5,38 @@
 ## Setup
 
 ```
-$ git clone https://github.com/jsbros/react-component-boilerplate
-$ cd react-component-boilerplate
-$ yarn install
+$ npm install --save react-tinyletter
 ```
-
-## Commands
+or...
 
 ```
-$ npm run lint
+$ yarn add react-tinyletter
 ```
 
-```
-$ npm run build
+## Usage 
+
+```jsx
+<Subscribe list="TinyLetterUsername">
+  <input type="email"/>
+  <input type="submit" value="Subscribe"/>
+</Subscribe>
 ```
 
-```
-$ npm run storybook
+## Style it with [<💅>](https://github.com/styled-components/styled-components)
+
+```jsx
+import styled from 'styled-components'
+
+const StyledSubscribe = styled(Subscribe)`
+  border: 1px solid deepskyblue;
+  padding: 25px;
+  width: 100%;
+`
+...
+<StyledSubscribe list="TinyLetterUsername">
+  <input type="email"/>
+  <input type="submit" value="Subscribe"/>
+</StyledSubscribe>
 ```
 
 ## Contribution Guidelines
