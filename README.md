@@ -16,6 +16,10 @@ $ yarn add react-tinyletter
 ## Usage 
 
 ```jsx
+import Subscribe from 'react-tinyletter'
+
+...
+
 <Subscribe list="TinyLetterUsername">
   <input type="email"/>
   <input type="submit" value="Subscribe"/>
@@ -25,7 +29,10 @@ $ yarn add react-tinyletter
 ## Style it with [<💅>](https://github.com/styled-components/styled-components)
 
 ```jsx
+import Subscribe from 'react-tinyletter'
 import styled from 'styled-components'
+
+...
 
 const StyledSubscribe = styled(Subscribe)`
   border: 1px solid deepskyblue;
