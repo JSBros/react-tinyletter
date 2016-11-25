@@ -1,5 +1,6 @@
 ![React TinyLetter Component](https://jsbros.github.io/react-tinyletter/banner.png)
-[![David](https://img.shields.io/david/jsbros/react-component-boilerplate.svg?style=flat-square)](https://github.com/JSBros/react-component-boilerplate/issues) [![Gitter](https://img.shields.io/gitter/room/JSBros/react-component-boilerplate.svg?style=flat-square)](https://gitter.im/JSBros/react-component-boilerplate?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+[![David](https://img.shields.io/david/jsbros/react-tinyletter.svg?style=flat-square)](https://github.com/JSBros/react-tinyletter/issues) [![Gitter](https://img.shields.io/gitter/room/JSBros/react-tinyletter.svg?style=flat-square)](https://gitter.im/JSBros/react-tinyletter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Setup
 
