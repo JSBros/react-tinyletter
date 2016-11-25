@@ -1,4 +1,4 @@
-import Subscribe from './components/Subscribe'
+import TinyLetter from './components/TinyLetter'
 
-export default Subscribe
+export default TinyLetter
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Subscribe(props) {
+function TinyLetter(props) {
   function subscribe() {
     window.open(`https://tinyletter.com/${props.list}`,
         'popupwindow', 'scrollbars=yes,width=800,height=600')
@@ -28,9 +28,9 @@ function Subscribe(props) {
   )
 }
 
-Subscribe.propTypes = {
+TinyLetter.propTypes = {
   children: React.PropTypes.node,
   list: React.PropTypes.string,
 }
 
-export default Subscribe
+export default TinyLetter
