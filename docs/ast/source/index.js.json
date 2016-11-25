@@ -1,0 +1,131 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "local": {
+            "type": "Identifier",
+            "name": "TinyLetter",
+            "range": [
+              7,
+              17
+            ],
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 17
+              }
+            }
+          },
+          "range": [
+            7,
+            17
+          ],
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 17
+            }
+          }
+        }
+      ],
+      "source": {
+        "type": "Literal",
+        "value": "./components/TinyLetter",
+        "raw": "'./components/TinyLetter'",
+        "range": [
+          23,
+          48
+        ],
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 23
+          },
+          "end": {
+            "line": 1,
+            "column": 48
+          }
+        }
+      },
+      "range": [
+        0,
+        50
+      ],
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 0
+        }
+      }
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "declaration": {
+        "type": "Identifier",
+        "name": "TinyLetter",
+        "range": [
+          65,
+          75
+        ],
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 15
+          },
+          "end": {
+            "line": 3,
+            "column": 25
+          }
+        },
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      "range": [
+        50,
+        77
+      ],
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 0
+        }
+      }
+    }
+  ],
+  "sourceType": "module",
+  "range": [
+    0,
+    77
+  ],
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 0
+    }
+  },
+  "comments": []
+}
