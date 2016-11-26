@@ -48,7 +48,7 @@ const StyledSubscribe = styled(Subscribe)`
 
 ## Documentation Reference
 
-[View the reference docs →](https://jsbros.github.io/react-tinyletter/index.html)
+[View the reference docs →](https://jsbros.github.io/react-tinyletter/docs/)
 
 ## Contribution Guidelines
 
@@ -57,9 +57,9 @@ const StyledSubscribe = styled(Subscribe)`
 
 ## Authors
 
-[Author List →](AUTHORS.md)
+[Author List →](https://github.com/JSBros/react-tinyletter/blob/master/AUTHORS.md)
 
 ## License
 
-The React Component Boilerplate is under the [MIT](LICENSE.md) License.
+The React Component Boilerplate is under the [MIT](https://github.com/JSBros/react-tinyletter/blob/master/LICENSE.md) License.
 
