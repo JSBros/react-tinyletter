@@ -1,12 +1,37 @@
 import React from 'react'
+import { Email, Submit } from '../'
 
 /**
  * The TinyLetter component acts as a wrapper
- * for the subscription form. It does not automatically
- * populate itself with input fields. Because of this,
- * To do a minimum implementation, you will need to do:
+ * for the subscription form. It automatically populates
+ * itself with input fields if no children are added.
+ * You can also manually add the children elements.
+ * Below are some examples of the various implementations.
+ *
+ * ## Using the auto-injected inputs
  *
  * ```jsx
+ * { TinyLetter } from 'react-tinyletter';
+ * ...
+ * <TinyLetter list="YourTinyLetterUsername"/>
+ * ```
+ *
+ * ## Using the included input components
+ *
+ * ```jsx
+ * import { TinyLetter, Email, Submit } from 'react-tinyletter';
+ * ...
+ * <TinyLetter list="YourTinyLetterUsername">
+ *   <Email/>
+ *   <Submit/>
+ * </TinyLetter>
+ * ```
+ * 
+ * ## Using input primitives
+ *
+ * ```jsx
+ * import { TinyLetter } from 'react-tinyletter';
+ * ...
  * <TinyLetter list="YourTinyLetterUsername">
  *   <input type="email"/>
  *   <input type="submit" value="Subscribe"/>
@@ -16,27 +41,27 @@ import React from 'react'
  * You need not worry about assigning the `name` or `id`
  * properties on form inputs, they will automatically get
  * added by the `TinyLetter` component. **However**, make
- * sure that you use the correct `type` on your input fields.
- * The `type` is how the `TinyLetter` component is able to
- * determine which `input` is which.
+ * sure that you use the correct `type` on your input fields
+ * if using primitives, as the `type` is how the `TinyLetter`
+ * component is able to determine which `input` is which.
  *
  * @param {object} props - jsx attributes
  * @return {ReactElement} - form wrapper markup
  */
 function TinyLetter(props) {
   function subscribe() {
-    window.open(`https://tinyletter.com/${props.list}`,
+    window.open(`httpsd://tinyletter.com/${props.list}`,
         'popupwindow', 'scrollbars=yes,width=800,height=600')
     return true
   }
-  const children = React.Children.map(props.children,
+  const children = props.children ? React.Children.map(props.children,
     child => child.props.type === 'email' ?
       React.cloneElement(child, {
         name: 'email',
         required: true
       }) :
       child
-  )
+  ) : (<div><Email/><Submit/></div>)
   return (
     <form
       action={`https://tinyletter.com/${props.list}`}

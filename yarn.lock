@@ -1147,6 +1147,10 @@ babylon@~5.8.3:
   version "5.8.38"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-5.8.38.tgz#ec9b120b11bf6ccd4173a18bf217e60b79859ffd"
 
+babylon@5.8.20:
+  version "5.8.20"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-5.8.20.tgz#0d7a3504c796656f79c998dd3dd5a1a41cd908ba"
+
 balanced-match@^0.4.1, balanced-match@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
@@ -1510,6 +1514,10 @@ core-js@^2.4.0:
 core-js@0.9.18:
   version "0.9.18"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-0.9.18.tgz#13f458e430232b0f4ec1f480da7c2f5288e9d095"
+
+core-js@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.0.1.tgz#82d2284b718a03bf8bf2813d5c17177c6adacf08"
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -1967,6 +1975,14 @@ esdoc:
     marked "0.3.5"
     minimist "1.1.1"
     taffydb "2.7.2"
+
+esdoc-es7-plugin:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/esdoc-es7-plugin/-/esdoc-es7-plugin-0.0.3.tgz#e31d2a531d08c334dd457927324b5a02f3e663a5"
+  dependencies:
+    babylon "5.8.20"
+    core-js "1.0.1"
+    estraverse "4.1.0"
 
 eslint:
   version "3.10.2"

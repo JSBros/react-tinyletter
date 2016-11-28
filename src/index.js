@@ -1,4 +1,4 @@
-import TinyLetter from './components/TinyLetter'
+import { TinyLetter, Email, Submit, } from './components'
 
-export default TinyLetter
+export { TinyLetter, Email, Submit, }
 

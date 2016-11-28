@@ -1,8 +1,18 @@
 {
   "coverage": "100%",
-  "expectCount": 1,
-  "actualCount": 1,
+  "expectCount": 3,
+  "actualCount": 3,
   "files": {
+    "src/components/Email/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/components/Submit/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
     "src/components/TinyLetter/index.js": {
       "expectCount": 1,
       "actualCount": 1,

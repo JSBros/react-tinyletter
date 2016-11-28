@@ -32,21 +32,48 @@
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components/TinyLetter</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TinyLetter">TinyLetter</a></span></span></li>
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components/Email</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Email">Email</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components/Submit</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Submit">Submit</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">components/TinyLetter</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TinyLetter">TinyLetter</a></span></span></li>
 </ul>
 </div>
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/TinyLetter/index.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;
+import { Email, Submit } from &apos;../&apos;
 
 /**
  * The TinyLetter component acts as a wrapper
- * for the subscription form. It does not automatically
- * populate itself with input fields. Because of this,
- * To do a minimum implementation, you will need to do:
+ * for the subscription form. It automatically populates
+ * itself with input fields if no children are added.
+ * You can also manually add the children elements.
+ * Below are some examples of the various implementations.
+ *
+ * ## Using the auto-injected inputs
  *
  * ```jsx
+ * { TinyLetter } from &apos;react-tinyletter&apos;;
+ * ...
+ * &lt;TinyLetter list=&quot;YourTinyLetterUsername&quot;/&gt;
+ * ```
+ *
+ * ## Using the included input components
+ *
+ * ```jsx
+ * import { TinyLetter, Email, Submit } from &apos;react-tinyletter&apos;;
+ * ...
+ * &lt;TinyLetter list=&quot;YourTinyLetterUsername&quot;&gt;
+ *   &lt;Email/&gt;
+ *   &lt;Submit/&gt;
+ * &lt;/TinyLetter&gt;
+ * ```
+ * 
+ * ## Using input primitives
+ *
+ * ```jsx
+ * import { TinyLetter } from &apos;react-tinyletter&apos;;
+ * ...
  * &lt;TinyLetter list=&quot;YourTinyLetterUsername&quot;&gt;
  *   &lt;input type=&quot;email&quot;/&gt;
  *   &lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot;/&gt;
@@ -56,27 +83,27 @@
  * You need not worry about assigning the `name` or `id`
  * properties on form inputs, they will automatically get
  * added by the `TinyLetter` component. **However**, make
- * sure that you use the correct `type` on your input fields.
- * The `type` is how the `TinyLetter` component is able to
- * determine which `input` is which.
+ * sure that you use the correct `type` on your input fields
+ * if using primitives, as the `type` is how the `TinyLetter`
+ * component is able to determine which `input` is which.
  *
  * @param {object} props - jsx attributes
  * @return {ReactElement} - form wrapper markup
  */
 function TinyLetter(props) {
   function subscribe() {
-    window.open(`https://tinyletter.com/${props.list}`,
+    window.open(`httpsd://tinyletter.com/${props.list}`,
         &apos;popupwindow&apos;, &apos;scrollbars=yes,width=800,height=600&apos;)
     return true
   }
-  const children = React.Children.map(props.children,
+  const children = props.children ? React.Children.map(props.children,
     child =&gt; child.props.type === &apos;email&apos; ?
       React.cloneElement(child, {
         name: &apos;email&apos;,
         required: true
       }) :
       child
-  )
+  ) : (&lt;div&gt;&lt;Email/&gt;&lt;Submit/&gt;&lt;/div&gt;)
   return (
     &lt;form
       action={`https://tinyletter.com/${props.list}`}

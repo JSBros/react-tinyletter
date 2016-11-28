@@ -14,3 +14,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - N/A
 
+## [v0.1.2] - 2016-11-27
+
+### Added
+
+* Added `Email` component
+* Added `Submit` component
+
+### Changed
+
+* No longer export the `TinyLetter` component as default. Export all components as an object.
+
+[Unreleased]: https://github.com/JSBros/react-tinyletter/compare/v0.1.2...master
+[v0.1.2]: https://github.com/JSBros/react-tinyletter/compare/v0.1.1...v0.1.2
+

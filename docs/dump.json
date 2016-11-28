@@ -4,16 +4,106 @@
     "kind": "file",
     "static": true,
     "variation": null,
+    "name": "src/components/Email/index.js",
+    "memberof": null,
+    "longname": "src/components/Email/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react'\nimport styled from 'styled-components'\n\n/**\n * The `Email` component is a very minimal input element.\n * It sets the type to `email` and the `placeholder`\n * to the value of the `placeholder` prop. If no placeholder\n * is set, it will set the placeholder to `email@site.com`.\n *\n * @return {ReactElement} - form wrapper markup\n */\nfunction Email(props) {\n  return (\n    <input \n      type=\"email\"\n      placeholder={props.placeholder ? props.placeholder : 'email@site.com'}\n      required\n      { ...props }\n    />\n  )\n}\n\nEmail.propTypes = {\n  placeholder: React.PropTypes.string,\n  className: React.PropTypes.string,\n}\n\nexport default Email\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "Email",
+    "memberof": "src/components/Email/index.js",
+    "longname": "src/components/Email/index.js~Email",
+    "access": null,
+    "export": true,
+    "importPath": "react-tinyletter/src/components/Email/index.js",
+    "importStyle": "Email",
+    "description": "The `Email` component is a very minimal input element.\nIt sets the type to `email` and the `placeholder`\nto the value of the `placeholder` prop. If no placeholder\nis set, it will set the placeholder to `email@site.com`.",
+    "lineNumber": 12,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ReactElement"
+      ],
+      "spread": false,
+      "description": "form wrapper markup"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/Submit/index.js",
+    "memberof": null,
+    "longname": "src/components/Submit/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\n\n\n/**\n * The `Submit` component is a very minimal form submit\n * button. It sets the type to `submit` and the `value`\n * to the value of the `title` prop. If no title is set,\n * it will set the title to `Subscribe`.\n *\n * @return {ReactElement} - form wrapper markup\n */\nfunction Submit(props) {\n  return (\n    <input\n      type=\"submit\"\n      value={props.title ? props.title : 'Subscribe'}\n      { ...props }\n    />\n  );\n}\n\nSubmit.propTypes = {\n  title: React.PropTypes.string,\n}\n\nexport default Submit;\n"
+  },
+  {
+    "__docId__": 3,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "Submit",
+    "memberof": "src/components/Submit/index.js",
+    "longname": "src/components/Submit/index.js~Submit",
+    "access": null,
+    "export": true,
+    "importPath": "react-tinyletter/src/components/Submit/index.js",
+    "importStyle": "Submit",
+    "description": "The `Submit` component is a very minimal form submit\nbutton. It sets the type to `submit` and the `value`\nto the value of the `title` prop. If no title is set,\nit will set the title to `Subscribe`.",
+    "lineNumber": 12,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ReactElement"
+      ],
+      "spread": false,
+      "description": "form wrapper markup"
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 4,
+    "kind": "file",
+    "static": true,
+    "variation": null,
     "name": "src/components/TinyLetter/index.js",
     "memberof": null,
     "longname": "src/components/TinyLetter/index.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import React from 'react'\n\n/**\n * The TinyLetter component acts as a wrapper\n * for the subscription form. It does not automatically\n * populate itself with input fields. Because of this,\n * To do a minimum implementation, you will need to do:\n *\n * ```jsx\n * <TinyLetter list=\"YourTinyLetterUsername\">\n *   <input type=\"email\"/>\n *   <input type=\"submit\" value=\"Subscribe\"/>\n * </TinyLetter>\n * ```\n * \n * You need not worry about assigning the `name` or `id`\n * properties on form inputs, they will automatically get\n * added by the `TinyLetter` component. **However**, make\n * sure that you use the correct `type` on your input fields.\n * The `type` is how the `TinyLetter` component is able to\n * determine which `input` is which.\n *\n * @param {object} props - jsx attributes\n * @return {ReactElement} - form wrapper markup\n */\nfunction TinyLetter(props) {\n  function subscribe() {\n    window.open(`https://tinyletter.com/${props.list}`,\n        'popupwindow', 'scrollbars=yes,width=800,height=600')\n    return true\n  }\n  const children = React.Children.map(props.children,\n    child => child.props.type === 'email' ?\n      React.cloneElement(child, {\n        name: 'email',\n        required: true\n      }) :\n      child\n  )\n  return (\n    <form\n      action={`https://tinyletter.com/${props.list}`}\n      method=\"post\"\n      target=\"popupwindow\"\n      onSubmit={subscribe}\n      {...props}\n      >\n      <input type=\"hidden\" value=\"1\" name=\"embed\" />\n      {children}\n    </form>\n  )\n}\n\nTinyLetter.propTypes = {\n  children: React.PropTypes.node,\n  list: React.PropTypes.string,\n}\n\nexport default TinyLetter\n"
+    "content": "import React from 'react'\nimport { Email, Submit } from '../'\n\n/**\n * The TinyLetter component acts as a wrapper\n * for the subscription form. It automatically populates\n * itself with input fields if no children are added.\n * You can also manually add the children elements.\n * Below are some examples of the various implementations.\n *\n * ## Using the auto-injected inputs\n *\n * ```jsx\n * { TinyLetter } from 'react-tinyletter';\n * ...\n * <TinyLetter list=\"YourTinyLetterUsername\"/>\n * ```\n *\n * ## Using the included input components\n *\n * ```jsx\n * import { TinyLetter, Email, Submit } from 'react-tinyletter';\n * ...\n * <TinyLetter list=\"YourTinyLetterUsername\">\n *   <Email/>\n *   <Submit/>\n * </TinyLetter>\n * ```\n * \n * ## Using input primitives\n *\n * ```jsx\n * import { TinyLetter } from 'react-tinyletter';\n * ...\n * <TinyLetter list=\"YourTinyLetterUsername\">\n *   <input type=\"email\"/>\n *   <input type=\"submit\" value=\"Subscribe\"/>\n * </TinyLetter>\n * ```\n * \n * You need not worry about assigning the `name` or `id`\n * properties on form inputs, they will automatically get\n * added by the `TinyLetter` component. **However**, make\n * sure that you use the correct `type` on your input fields\n * if using primitives, as the `type` is how the `TinyLetter`\n * component is able to determine which `input` is which.\n *\n * @param {object} props - jsx attributes\n * @return {ReactElement} - form wrapper markup\n */\nfunction TinyLetter(props) {\n  function subscribe() {\n    window.open(`httpsd://tinyletter.com/${props.list}`,\n        'popupwindow', 'scrollbars=yes,width=800,height=600')\n    return true\n  }\n  const children = props.children ? React.Children.map(props.children,\n    child => child.props.type === 'email' ?\n      React.cloneElement(child, {\n        name: 'email',\n        required: true\n      }) :\n      child\n  ) : (<div><Email/><Submit/></div>)\n  return (\n    <form\n      action={`https://tinyletter.com/${props.list}`}\n      method=\"post\"\n      target=\"popupwindow\"\n      onSubmit={subscribe}\n      {...props}\n      >\n      <input type=\"hidden\" value=\"1\" name=\"embed\" />\n      {children}\n    </form>\n  )\n}\n\nTinyLetter.propTypes = {\n  children: React.PropTypes.node,\n  list: React.PropTypes.string,\n}\n\nexport default TinyLetter\n"
   },
   {
-    "__docId__": 1,
+    "__docId__": 5,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -24,8 +114,8 @@
     "export": true,
     "importPath": "react-tinyletter/src/components/TinyLetter/index.js",
     "importStyle": "TinyLetter",
-    "description": "The TinyLetter component acts as a wrapper\nfor the subscription form. It does not automatically\npopulate itself with input fields. Because of this,\nTo do a minimum implementation, you will need to do:\n\n```jsx\n<TinyLetter list=\"YourTinyLetterUsername\">\n  <input type=\"email\"/>\n  <input type=\"submit\" value=\"Subscribe\"/>\n</TinyLetter>\n```\n\nYou need not worry about assigning the `name` or `id`\nproperties on form inputs, they will automatically get\nadded by the `TinyLetter` component. **However**, make\nsure that you use the correct `type` on your input fields.\nThe `type` is how the `TinyLetter` component is able to\ndetermine which `input` is which.",
-    "lineNumber": 26,
+    "description": "The TinyLetter component acts as a wrapper\nfor the subscription form. It automatically populates\nitself with input fields if no children are added.\nYou can also manually add the children elements.\nBelow are some examples of the various implementations.\n\n## Using the auto-injected inputs\n\n```jsx\n{ TinyLetter } from 'react-tinyletter';\n...\n<TinyLetter list=\"YourTinyLetterUsername\"/>\n```\n\n## Using the included input components\n\n```jsx\nimport { TinyLetter, Email, Submit } from 'react-tinyletter';\n...\n<TinyLetter list=\"YourTinyLetterUsername\">\n  <Email/>\n  <Submit/>\n</TinyLetter>\n```\n\n## Using input primitives\n\n```jsx\nimport { TinyLetter } from 'react-tinyletter';\n...\n<TinyLetter list=\"YourTinyLetterUsername\">\n  <input type=\"email\"/>\n  <input type=\"submit\" value=\"Subscribe\"/>\n</TinyLetter>\n```\n\nYou need not worry about assigning the `name` or `id`\nproperties on form inputs, they will automatically get\nadded by the `TinyLetter` component. **However**, make\nsure that you use the correct `type` on your input fields\nif using primitives, as the `type` is how the `TinyLetter`\ncomponent is able to determine which `input` is which.",
+    "lineNumber": 51,
     "params": [
       {
         "nullable": null,
@@ -49,7 +139,20 @@
     "generator": false
   },
   {
-    "__docId__": 2,
+    "__docId__": 6,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "src/components/index.js",
+    "memberof": null,
+    "longname": "src/components/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Email from './Email'\nimport Submit from './Submit'\nimport TinyLetter from './TinyLetter'\n\nexport { Email, Submit, TinyLetter, }\n"
+  },
+  {
+    "__docId__": 7,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -59,10 +162,10 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import TinyLetter from './components/TinyLetter'\n\nexport default TinyLetter\n\n"
+    "content": "import { TinyLetter, Email, Submit, } from './components'\n\nexport { TinyLetter, Email, Submit, }\n\n"
   },
   {
-    "__docId__": 4,
+    "__docId__": 9,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -75,7 +178,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 5,
+    "__docId__": 10,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -88,7 +191,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 6,
+    "__docId__": 11,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -101,7 +204,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 7,
+    "__docId__": 12,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -114,7 +217,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 8,
+    "__docId__": 13,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -127,7 +230,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 9,
+    "__docId__": 14,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -140,7 +243,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 10,
+    "__docId__": 15,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -153,7 +256,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 11,
+    "__docId__": 16,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -166,7 +269,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 12,
+    "__docId__": 17,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -179,7 +282,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 13,
+    "__docId__": 18,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -192,7 +295,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 14,
+    "__docId__": 19,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -205,7 +308,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 15,
+    "__docId__": 20,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -218,7 +321,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 16,
+    "__docId__": 21,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -231,7 +334,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 17,
+    "__docId__": 22,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -244,7 +347,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 18,
+    "__docId__": 23,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -257,7 +360,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 19,
+    "__docId__": 24,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -270,7 +373,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 20,
+    "__docId__": 25,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -283,7 +386,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 21,
+    "__docId__": 26,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -296,7 +399,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 22,
+    "__docId__": 27,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -309,7 +412,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 23,
+    "__docId__": 28,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -322,7 +425,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 24,
+    "__docId__": 29,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -335,7 +438,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 25,
+    "__docId__": 30,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -348,7 +451,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 26,
+    "__docId__": 31,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -361,7 +464,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 27,
+    "__docId__": 32,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -374,7 +477,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 28,
+    "__docId__": 33,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -387,7 +490,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 29,
+    "__docId__": 34,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -400,7 +503,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 30,
+    "__docId__": 35,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -413,7 +516,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 31,
+    "__docId__": 36,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -426,7 +529,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 32,
+    "__docId__": 37,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -439,7 +542,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 33,
+    "__docId__": 38,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -452,7 +555,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 34,
+    "__docId__": 39,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -465,7 +568,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 35,
+    "__docId__": 40,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -478,7 +581,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 36,
+    "__docId__": 41,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -491,7 +594,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 37,
+    "__docId__": 42,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -504,7 +607,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 38,
+    "__docId__": 43,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -517,7 +620,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 39,
+    "__docId__": 44,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -530,7 +633,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 40,
+    "__docId__": 45,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -543,7 +646,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 41,
+    "__docId__": 46,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -556,7 +659,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 42,
+    "__docId__": 47,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -569,7 +672,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 43,
+    "__docId__": 48,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -582,7 +685,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 44,
+    "__docId__": 49,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -595,7 +698,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 45,
+    "__docId__": 50,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -608,7 +711,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 46,
+    "__docId__": 51,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -621,7 +724,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 47,
+    "__docId__": 52,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -634,7 +737,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 48,
+    "__docId__": 53,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -647,7 +750,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 49,
+    "__docId__": 54,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -660,7 +763,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 50,
+    "__docId__": 55,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -673,7 +776,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 57,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -686,7 +789,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 58,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -699,7 +802,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 54,
+    "__docId__": 59,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -712,7 +815,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 60,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -725,7 +828,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 61,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -738,7 +841,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 57,
+    "__docId__": 62,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -751,7 +854,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 63,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -764,7 +867,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 64,
     "kind": "external",
     "static": true,
     "variation": null,

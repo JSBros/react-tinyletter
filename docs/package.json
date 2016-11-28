@@ -51,6 +51,7 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
+    "esdoc-es7-plugin": "^0.0.3",
     "react": "^15.3.2",
     "styled-components": "^1.0.10"
   }

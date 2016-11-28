@@ -15,34 +15,77 @@ $ yarn add react-tinyletter
 
 ## Usage 
 
+The TinyLetter component acts as a wrapper for the subscription form. It automatically populates itself with input fields if no children are added. You can also manually add the children elements. Below are some examples of the various implementations.
+
+## Using the auto-injected inputs
+
 ```jsx
-import Subscribe from 'react-tinyletter'
-
+{ TinyLetter } from 'react-tinyletter';
 ...
+<TinyLetter list="YourTinyLetterUsername"/>
+```
 
-<Subscribe list="TinyLetterUsername">
+## Using the included input components
+
+```jsx
+import { TinyLetter, Email, Submit } from 'react-tinyletter';
+...
+<TinyLetter list="YourTinyLetterUsername">
+  <Email/>
+  <Submit/>
+</TinyLetter>
+```
+ 
+## Using input primitives
+
+```jsx
+import { TinyLetter } from 'react-tinyletter';
+...
+<TinyLetter list="YourTinyLetterUsername">
   <input type="email"/>
   <input type="submit" value="Subscribe"/>
-</Subscribe>
+</TinyLetter>
 ```
+
+You need not worry about assigning the `name` or `id` properties on form inputs, they will automatically get added by the `TinyLetter` component. **However**, make sure that you use the correct `type` on your input fields if using primitives, as the `type` is how the `TinyLetter` component is able to determine which `input` is which.
 
 ## Style it with [<💅>](https://github.com/styled-components/styled-components)
 
 ```jsx
-import Subscribe from 'react-tinyletter'
+import { TinyLetter, Email, Submit } from 'react-tinyletter'
 import styled from 'styled-components'
 
 ...
 
-const StyledSubscribe = styled(Subscribe)`
-  border: 1px solid deepskyblue;
-  padding: 25px;
-  width: 100%;
+const StyledEmail = styled(Email)`
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  font-weight: 100;
+  width: 70%;
+`
+
+const StyledSubmit = styled(Submit)`
+  background: transparent;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  border-top-left-radius: 0;
+  border: 1px solid #ccc;
+  width: 30%;
+  &:hover {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: deepskyblue;
+    color: white;
+  }
 `
 ...
 <StyledSubscribe list="TinyLetterUsername">
-  <input type="email"/>
-  <input type="submit" value="Subscribe"/>
+  <StyledEmail/>
+  <StyledSubmit/>
 </StyledSubscribe>
 ```
 
