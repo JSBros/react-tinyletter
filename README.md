@@ -20,7 +20,7 @@ The TinyLetter component acts as a wrapper for the subscription form. It automat
 ## Using the auto-injected inputs
 
 ```jsx
-{ TinyLetter } from 'react-tinyletter';
+import { TinyLetter } from 'react-tinyletter';
 ...
 <TinyLetter list="YourTinyLetterUsername"/>
 ```
