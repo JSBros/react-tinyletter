@@ -1,122 +1,7 @@
 {
   "type": "Program",
-  "body": [
-    {
-      "type": "ImportDeclaration",
-      "specifiers": [
-        {
-          "type": "ImportDefaultSpecifier",
-          "local": {
-            "type": "Identifier",
-            "name": "TinyLetter",
-            "range": [
-              7,
-              17
-            ],
-            "loc": {
-              "start": {
-                "line": 1,
-                "column": 7
-              },
-              "end": {
-                "line": 1,
-                "column": 17
-              }
-            }
-          },
-          "range": [
-            7,
-            17
-          ],
-          "loc": {
-            "start": {
-              "line": 1,
-              "column": 7
-            },
-            "end": {
-              "line": 1,
-              "column": 17
-            }
-          }
-        }
-      ],
-      "source": {
-        "type": "Literal",
-        "value": "./components/TinyLetter",
-        "raw": "'./components/TinyLetter'",
-        "range": [
-          23,
-          48
-        ],
-        "loc": {
-          "start": {
-            "line": 1,
-            "column": 23
-          },
-          "end": {
-            "line": 1,
-            "column": 48
-          }
-        }
-      },
-      "range": [
-        0,
-        50
-      ],
-      "loc": {
-        "start": {
-          "line": 1,
-          "column": 0
-        },
-        "end": {
-          "line": 3,
-          "column": 0
-        }
-      }
-    },
-    {
-      "type": "ExportDefaultDeclaration",
-      "declaration": {
-        "type": "Identifier",
-        "name": "TinyLetter",
-        "range": [
-          65,
-          75
-        ],
-        "loc": {
-          "start": {
-            "line": 3,
-            "column": 15
-          },
-          "end": {
-            "line": 3,
-            "column": 25
-          }
-        },
-        "leadingComments": [],
-        "trailingComments": []
-      },
-      "range": [
-        50,
-        77
-      ],
-      "loc": {
-        "start": {
-          "line": 3,
-          "column": 0
-        },
-        "end": {
-          "line": 5,
-          "column": 0
-        }
-      }
-    }
-  ],
-  "sourceType": "module",
-  "range": [
-    0,
-    77
-  ],
+  "start": 0,
+  "end": 98,
   "loc": {
     "start": {
       "line": 1,
@@ -127,5 +12,344 @@
       "column": 0
     }
   },
-  "comments": []
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 57,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 57
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 9,
+          "end": 19,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 19
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 19,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 19
+              }
+            },
+            "name": "TinyLetter"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 19,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 19
+              }
+            },
+            "name": "TinyLetter"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 21,
+          "end": 26,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 21
+            },
+            "end": {
+              "line": 1,
+              "column": 26
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 21,
+            "end": 26,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 21
+              },
+              "end": {
+                "line": 1,
+                "column": 26
+              }
+            },
+            "name": "Email"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 21,
+            "end": 26,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 21
+              },
+              "end": {
+                "line": 1,
+                "column": 26
+              }
+            },
+            "name": "Email"
+          }
+        },
+        {
+          "type": "ImportSpecifier",
+          "start": 28,
+          "end": 34,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 28
+            },
+            "end": {
+              "line": 1,
+              "column": 34
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 28,
+            "end": 34,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 28
+              },
+              "end": {
+                "line": 1,
+                "column": 34
+              }
+            },
+            "name": "Submit"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 28,
+            "end": 34,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 28
+              },
+              "end": {
+                "line": 1,
+                "column": 34
+              }
+            },
+            "name": "Submit"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 43,
+        "end": 57,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 43
+          },
+          "end": {
+            "line": 1,
+            "column": 57
+          }
+        },
+        "value": "./components",
+        "rawValue": "./components",
+        "raw": "'./components'"
+      }
+    },
+    {
+      "type": "ExportNamedDeclaration",
+      "start": 59,
+      "end": 96,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 37
+        }
+      },
+      "declaration": null,
+      "specifiers": [
+        {
+          "type": "ExportSpecifier",
+          "start": 68,
+          "end": 78,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 19
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 68,
+            "end": 78,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 19
+              }
+            },
+            "name": "TinyLetter"
+          },
+          "exported": {
+            "type": "Identifier",
+            "start": 68,
+            "end": 78,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 9
+              },
+              "end": {
+                "line": 3,
+                "column": 19
+              }
+            },
+            "name": "TinyLetter"
+          }
+        },
+        {
+          "type": "ExportSpecifier",
+          "start": 80,
+          "end": 85,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 21
+            },
+            "end": {
+              "line": 3,
+              "column": 26
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 80,
+            "end": 85,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 21
+              },
+              "end": {
+                "line": 3,
+                "column": 26
+              }
+            },
+            "name": "Email"
+          },
+          "exported": {
+            "type": "Identifier",
+            "start": 80,
+            "end": 85,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 21
+              },
+              "end": {
+                "line": 3,
+                "column": 26
+              }
+            },
+            "name": "Email"
+          }
+        },
+        {
+          "type": "ExportSpecifier",
+          "start": 87,
+          "end": 93,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 28
+            },
+            "end": {
+              "line": 3,
+              "column": 34
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 87,
+            "end": 93,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 28
+              },
+              "end": {
+                "line": 3,
+                "column": 34
+              }
+            },
+            "name": "Submit"
+          },
+          "exported": {
+            "type": "Identifier",
+            "start": 87,
+            "end": 93,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 28
+              },
+              "end": {
+                "line": 3,
+                "column": 34
+              }
+            },
+            "name": "Submit"
+          }
+        }
+      ],
+      "source": null
+    }
+  ]
 }

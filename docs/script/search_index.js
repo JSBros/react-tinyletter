@@ -1,5 +1,17 @@
 window.esdocSearchIndex = [
   [
+    "react-tinyletter/src/components/email/index.js~email",
+    "function/index.html#static-function-Email",
+    "<span>Email</span> <span class=\"search-result-import-path\">react-tinyletter/src/components/Email/index.js</span>",
+    "function"
+  ],
+  [
+    "react-tinyletter/src/components/submit/index.js~submit",
+    "function/index.html#static-function-Submit",
+    "<span>Submit</span> <span class=\"search-result-import-path\">react-tinyletter/src/components/Submit/index.js</span>",
+    "function"
+  ],
+  [
     "react-tinyletter/src/components/tinyletter/index.js~tinyletter",
     "function/index.html#static-function-TinyLetter",
     "<span>TinyLetter</span> <span class=\"search-result-import-path\">react-tinyletter/src/components/TinyLetter/index.js</span>",
@@ -336,9 +348,27 @@ window.esdocSearchIndex = [
     "external"
   ],
   [
+    "src/components/email/index.js",
+    "file/src/components/Email/index.js.html",
+    "src/components/Email/index.js",
+    "file"
+  ],
+  [
+    "src/components/submit/index.js",
+    "file/src/components/Submit/index.js.html",
+    "src/components/Submit/index.js",
+    "file"
+  ],
+  [
     "src/components/tinyletter/index.js",
     "file/src/components/TinyLetter/index.js.html",
     "src/components/TinyLetter/index.js",
+    "file"
+  ],
+  [
+    "src/components/index.js",
+    "file/src/components/index.js.html",
+    "src/components/index.js",
     "file"
   ],
   [

@@ -1,0 +1,1177 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 533,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 27,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 26,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 26
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 7,
+          "end": 12,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 7,
+            "end": 12,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 7
+              },
+              "end": {
+                "line": 1,
+                "column": 12
+              }
+            },
+            "name": "React"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 18,
+        "end": 25,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 18
+          },
+          "end": {
+            "line": 1,
+            "column": 25
+          }
+        },
+        "value": "react",
+        "rawValue": "react",
+        "raw": "'react'"
+      },
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * The `Submit` component is a very minimal form submit\n * button. It sets the type to `submit` and the `value`\n * to the value of the `title` prop. If no title is set,\n * it will set the title to `Subscribe`.\n *\n * @return {ReactElement} - form wrapper markup\n ",
+          "start": 29,
+          "end": 297,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 3
+            }
+          },
+          "range": [
+            29,
+            297
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "start": 298,
+      "end": 451,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 20,
+          "column": 1
+        }
+      },
+      "id": {
+        "type": "Identifier",
+        "start": 307,
+        "end": 313,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 9
+          },
+          "end": {
+            "line": 12,
+            "column": 15
+          }
+        },
+        "name": "Submit",
+        "leadingComments": null
+      },
+      "generator": false,
+      "expression": false,
+      "async": false,
+      "params": [
+        {
+          "type": "Identifier",
+          "start": 314,
+          "end": 319,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 16
+            },
+            "end": {
+              "line": 12,
+              "column": 21
+            }
+          },
+          "name": "props"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "start": 321,
+        "end": 451,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 23
+          },
+          "end": {
+            "line": 20,
+            "column": 1
+          }
+        },
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "start": 325,
+            "end": 449,
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 2
+              },
+              "end": {
+                "line": 19,
+                "column": 4
+              }
+            },
+            "argument": {
+              "type": "JSXElement",
+              "start": 338,
+              "end": 444,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 4
+                },
+                "end": {
+                  "line": 18,
+                  "column": 6
+                }
+              },
+              "openingElement": {
+                "type": "JSXOpeningElement",
+                "start": 338,
+                "end": 444,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 6
+                  }
+                },
+                "attributes": [
+                  {
+                    "type": "JSXAttribute",
+                    "start": 351,
+                    "end": 364,
+                    "loc": {
+                      "start": {
+                        "line": 15,
+                        "column": 6
+                      },
+                      "end": {
+                        "line": 15,
+                        "column": 19
+                      }
+                    },
+                    "name": {
+                      "type": "JSXIdentifier",
+                      "start": 351,
+                      "end": 355,
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 10
+                        }
+                      },
+                      "name": "type"
+                    },
+                    "value": {
+                      "type": "Literal",
+                      "start": 356,
+                      "end": 364,
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 19
+                        }
+                      },
+                      "value": "submit",
+                      "rawValue": null,
+                      "raw": "\"submit\""
+                    }
+                  },
+                  {
+                    "type": "JSXAttribute",
+                    "start": 371,
+                    "end": 418,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 6
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 53
+                      }
+                    },
+                    "name": {
+                      "type": "JSXIdentifier",
+                      "start": 371,
+                      "end": 376,
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 11
+                        }
+                      },
+                      "name": "value"
+                    },
+                    "value": {
+                      "type": "JSXExpressionContainer",
+                      "start": 377,
+                      "end": 418,
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 12
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 53
+                        }
+                      },
+                      "expression": {
+                        "type": "ConditionalExpression",
+                        "start": 378,
+                        "end": 417,
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 52
+                          }
+                        },
+                        "test": {
+                          "type": "MemberExpression",
+                          "start": 378,
+                          "end": 389,
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 24
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 378,
+                            "end": 383,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 18
+                              }
+                            },
+                            "name": "props"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 384,
+                            "end": 389,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 24
+                              }
+                            },
+                            "name": "title"
+                          },
+                          "computed": false
+                        },
+                        "consequent": {
+                          "type": "MemberExpression",
+                          "start": 392,
+                          "end": 403,
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 27
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 38
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 392,
+                            "end": 397,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 32
+                              }
+                            },
+                            "name": "props"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 398,
+                            "end": 403,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 33
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 38
+                              }
+                            },
+                            "name": "title"
+                          },
+                          "computed": false
+                        },
+                        "alternate": {
+                          "type": "Literal",
+                          "start": 406,
+                          "end": 417,
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 41
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 52
+                            }
+                          },
+                          "value": "Subscribe",
+                          "rawValue": "Subscribe",
+                          "raw": "'Subscribe'"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "JSXSpreadAttribute",
+                    "start": 425,
+                    "end": 437,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 6
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 18
+                      }
+                    },
+                    "argument": {
+                      "type": "Identifier",
+                      "start": 430,
+                      "end": 435,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 11
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 16
+                        }
+                      },
+                      "name": "props"
+                    }
+                  }
+                ],
+                "name": {
+                  "type": "JSXIdentifier",
+                  "start": 339,
+                  "end": 344,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 5
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 10
+                    }
+                  },
+                  "name": "input"
+                },
+                "selfClosing": true
+              },
+              "closingElement": null,
+              "children": [],
+              "parenthesizedExpression": true
+            }
+          }
+        ]
+      },
+      "leadingComments": [],
+      "name": "_",
+      "trailingComments": []
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 453,
+      "end": 508,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 1
+        }
+      },
+      "expression": {
+        "type": "AssignmentExpression",
+        "start": 453,
+        "end": 508,
+        "loc": {
+          "start": {
+            "line": 22,
+            "column": 0
+          },
+          "end": {
+            "line": 24,
+            "column": 1
+          }
+        },
+        "operator": "=",
+        "left": {
+          "type": "MemberExpression",
+          "start": 453,
+          "end": 469,
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 0
+            },
+            "end": {
+              "line": 22,
+              "column": 16
+            }
+          },
+          "object": {
+            "type": "Identifier",
+            "start": 453,
+            "end": 459,
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 0
+              },
+              "end": {
+                "line": 22,
+                "column": 6
+              }
+            },
+            "name": "Submit"
+          },
+          "property": {
+            "type": "Identifier",
+            "start": 460,
+            "end": 469,
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 7
+              },
+              "end": {
+                "line": 22,
+                "column": 16
+              }
+            },
+            "name": "propTypes"
+          },
+          "computed": false
+        },
+        "right": {
+          "type": "ObjectExpression",
+          "start": 472,
+          "end": 508,
+          "loc": {
+            "start": {
+              "line": 22,
+              "column": 19
+            },
+            "end": {
+              "line": 24,
+              "column": 1
+            }
+          },
+          "properties": [
+            {
+              "type": "Property",
+              "start": 476,
+              "end": 505,
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 2
+                },
+                "end": {
+                  "line": 23,
+                  "column": 31
+                }
+              },
+              "method": false,
+              "shorthand": false,
+              "computed": false,
+              "key": {
+                "type": "Identifier",
+                "start": 476,
+                "end": 481,
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 7
+                  }
+                },
+                "name": "title"
+              },
+              "value": {
+                "type": "MemberExpression",
+                "start": 483,
+                "end": 505,
+                "loc": {
+                  "start": {
+                    "line": 23,
+                    "column": 9
+                  },
+                  "end": {
+                    "line": 23,
+                    "column": 31
+                  }
+                },
+                "object": {
+                  "type": "MemberExpression",
+                  "start": 483,
+                  "end": 498,
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 24
+                    }
+                  },
+                  "object": {
+                    "type": "Identifier",
+                    "start": 483,
+                    "end": 488,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 14
+                      }
+                    },
+                    "name": "React"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "start": 489,
+                    "end": 498,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 15
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 24
+                      }
+                    },
+                    "name": "PropTypes"
+                  },
+                  "computed": false
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 499,
+                  "end": 505,
+                  "loc": {
+                    "start": {
+                      "line": 23,
+                      "column": 25
+                    },
+                    "end": {
+                      "line": 23,
+                      "column": 31
+                    }
+                  },
+                  "name": "string"
+                },
+                "computed": false
+              },
+              "kind": "init"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "Identifier",
+      "start": 510,
+      "end": 532,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 22
+        }
+      },
+      "declaration": {
+        "type": "Identifier",
+        "start": 525,
+        "end": 531,
+        "loc": {
+          "start": {
+            "line": 26,
+            "column": 15
+          },
+          "end": {
+            "line": 26,
+            "column": 21
+          }
+        },
+        "name": "Submit"
+      },
+      "name": "_",
+      "leadingComments": [],
+      "trailingComments": []
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 510,
+      "end": 532,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 22
+        }
+      },
+      "declaration": {
+        "type": "FunctionDeclaration",
+        "start": 298,
+        "end": 451,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 0
+          },
+          "end": {
+            "line": 20,
+            "column": 1
+          }
+        },
+        "id": {
+          "type": "Identifier",
+          "start": 307,
+          "end": 313,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 9
+            },
+            "end": {
+              "line": 12,
+              "column": 15
+            }
+          },
+          "name": "Submit",
+          "leadingComments": null
+        },
+        "generator": false,
+        "expression": false,
+        "async": false,
+        "params": [
+          {
+            "type": "Identifier",
+            "start": 314,
+            "end": 319,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 16
+              },
+              "end": {
+                "line": 12,
+                "column": 21
+              }
+            },
+            "name": "props"
+          }
+        ],
+        "body": {
+          "type": "BlockStatement",
+          "start": 321,
+          "end": 451,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 23
+            },
+            "end": {
+              "line": 20,
+              "column": 1
+            }
+          },
+          "body": [
+            {
+              "type": "ReturnStatement",
+              "start": 325,
+              "end": 449,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 2
+                },
+                "end": {
+                  "line": 19,
+                  "column": 4
+                }
+              },
+              "argument": {
+                "type": "JSXElement",
+                "start": 338,
+                "end": 444,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 4
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 6
+                  }
+                },
+                "openingElement": {
+                  "type": "JSXOpeningElement",
+                  "start": 338,
+                  "end": 444,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 6
+                    }
+                  },
+                  "attributes": [
+                    {
+                      "type": "JSXAttribute",
+                      "start": 351,
+                      "end": 364,
+                      "loc": {
+                        "start": {
+                          "line": 15,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 15,
+                          "column": 19
+                        }
+                      },
+                      "name": {
+                        "type": "JSXIdentifier",
+                        "start": 351,
+                        "end": 355,
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 6
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 10
+                          }
+                        },
+                        "name": "type"
+                      },
+                      "value": {
+                        "type": "Literal",
+                        "start": 356,
+                        "end": 364,
+                        "loc": {
+                          "start": {
+                            "line": 15,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 15,
+                            "column": 19
+                          }
+                        },
+                        "value": "submit",
+                        "rawValue": null,
+                        "raw": "\"submit\""
+                      }
+                    },
+                    {
+                      "type": "JSXAttribute",
+                      "start": 371,
+                      "end": 418,
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 53
+                        }
+                      },
+                      "name": {
+                        "type": "JSXIdentifier",
+                        "start": 371,
+                        "end": 376,
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 6
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 11
+                          }
+                        },
+                        "name": "value"
+                      },
+                      "value": {
+                        "type": "JSXExpressionContainer",
+                        "start": 377,
+                        "end": 418,
+                        "loc": {
+                          "start": {
+                            "line": 16,
+                            "column": 12
+                          },
+                          "end": {
+                            "line": 16,
+                            "column": 53
+                          }
+                        },
+                        "expression": {
+                          "type": "ConditionalExpression",
+                          "start": 378,
+                          "end": 417,
+                          "loc": {
+                            "start": {
+                              "line": 16,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 16,
+                              "column": 52
+                            }
+                          },
+                          "test": {
+                            "type": "MemberExpression",
+                            "start": 378,
+                            "end": 389,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 24
+                              }
+                            },
+                            "object": {
+                              "type": "Identifier",
+                              "start": 378,
+                              "end": 383,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 13
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 18
+                                }
+                              },
+                              "name": "props"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 384,
+                              "end": 389,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 19
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 24
+                                }
+                              },
+                              "name": "title"
+                            },
+                            "computed": false
+                          },
+                          "consequent": {
+                            "type": "MemberExpression",
+                            "start": 392,
+                            "end": 403,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 38
+                              }
+                            },
+                            "object": {
+                              "type": "Identifier",
+                              "start": 392,
+                              "end": 397,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 32
+                                }
+                              },
+                              "name": "props"
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 398,
+                              "end": 403,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 33
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 38
+                                }
+                              },
+                              "name": "title"
+                            },
+                            "computed": false
+                          },
+                          "alternate": {
+                            "type": "Literal",
+                            "start": 406,
+                            "end": 417,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 41
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 52
+                              }
+                            },
+                            "value": "Subscribe",
+                            "rawValue": "Subscribe",
+                            "raw": "'Subscribe'"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "JSXSpreadAttribute",
+                      "start": 425,
+                      "end": 437,
+                      "loc": {
+                        "start": {
+                          "line": 17,
+                          "column": 6
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 18
+                        }
+                      },
+                      "argument": {
+                        "type": "Identifier",
+                        "start": 430,
+                        "end": 435,
+                        "loc": {
+                          "start": {
+                            "line": 17,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 16
+                          }
+                        },
+                        "name": "props"
+                      }
+                    }
+                  ],
+                  "name": {
+                    "type": "JSXIdentifier",
+                    "start": 339,
+                    "end": 344,
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 5
+                      },
+                      "end": {
+                        "line": 14,
+                        "column": 10
+                      }
+                    },
+                    "name": "input"
+                  },
+                  "selfClosing": true
+                },
+                "closingElement": null,
+                "children": [],
+                "parenthesizedExpression": true
+              }
+            }
+          ]
+        },
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * The `Submit` component is a very minimal form submit\n * button. It sets the type to `submit` and the `value`\n * to the value of the `title` prop. If no title is set,\n * it will set the title to `Subscribe`.\n *\n * @return {ReactElement} - form wrapper markup\n ",
+            "start": 29,
+            "end": 297,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            },
+            "range": [
+              29,
+              297
+            ]
+          }
+        ],
+        "trailingComments": []
+      }
+    }
+  ]
+}

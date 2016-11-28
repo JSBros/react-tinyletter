@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | API Document</title>
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/components/Email/index.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -39,11 +39,35 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { TinyLetter, Email, Submit, } from &apos;./components&apos;
+<div class="content" data-ice="content"><h1 data-ice="title">src/components/Email/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React from &apos;react&apos;
+import styled from &apos;styled-components&apos;
 
-export { TinyLetter, Email, Submit, }
+/**
+ * The `Email` component is a very minimal input element.
+ * It sets the type to `email` and the `placeholder`
+ * to the value of the `placeholder` prop. If no placeholder
+ * is set, it will set the placeholder to `email@site.com`.
+ *
+ * @return {ReactElement} - form wrapper markup
+ */
+function Email(props) {
+  return (
+    &lt;input 
+      type=&quot;email&quot;
+      placeholder={props.placeholder ? props.placeholder : &apos;email@site.com&apos;}
+      required
+      { ...props }
+    /&gt;
+  )
+}
 
+Email.propTypes = {
+  placeholder: React.PropTypes.string,
+  className: React.PropTypes.string,
+}
+
+export default Email
 </code></pre>
 
 </div>
