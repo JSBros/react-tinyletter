@@ -83,10 +83,10 @@ const StyledSubmit = styled(Submit)`
   }
 `
 ...
-<StyledSubscribe list="TinyLetterUsername">
+<TinyLetter list="TinyLetterUsername">
   <StyledEmail/>
   <StyledSubmit/>
-</StyledSubscribe>
+</TinyLetter>
 ```
 
 ## Documentation Reference
