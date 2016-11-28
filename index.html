@@ -1,48 +1,48 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@garetmckinley"/><meta name="twitter:creator" content="@garetmckinley"/><meta name="twitter:title" content="React TinyLetter Component"/><meta name="twitter:description" content="Easily add subscription forms to your React apps!"/><meta name="twitter:image" content="https://jsbros.github.io/react-tinyletter/twitter-card.png"/><title>React TinyLetter Component</title><link rel="shortcut icon" href="/react-tinyletter/favicon.ico"/><link rel="stylesheet" href="/react-tinyletter/app.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/gruvbox-dark.min.css"/></head><body><div id="root"><div data-reactroot="" data-reactid="1" data-react-checksum="-1997083398"><div width="900px" class="bjikrE" data-reactid="2"><section class="cpodps jHuiZP" data-reactid="3"><div class="jAVKpJ" data-reactid="4"><img src="/react-tinyletter/banner.png" alt="React Logo" class="jzXZsK" data-reactid="5"/></div></section><section class="cpodps jHuiZP" data-reactid="6"><div class="jAVKpJ" data-reactid="7"><a href="https://github.com/jsbros/react-tinyletter" class="CqoRB" data-reactid="8">Visit GitHub</a><a href="/react-tinyletter/docs" class="CqoRB" data-reactid="9">View Documentation</a></div></section><section class="cpodps jHuiZP" data-reactid="10"><div class="jAVKpJ" data-reactid="11"><h2 class="kKDPag" data-reactid="12">Easily add subscription forms to your React apps!</h2><p data-reactid="13">The react-tinyletter component quickly generates the required &lt;form&gt; wrapper tags for TinyLetter email subscriptions, allowing you to focus on making kick-ass subscription forms.</p></div></section><section class="jHuiZP" data-reactid="14"><div class="cWzSkB" data-reactid="15"><pre data-reactid="16"><code class="jsx iffjtX" data-reactid="17">import React from &#x27;react&#x27;;
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@garetmckinley"/><meta name="twitter:creator" content="@garetmckinley"/><meta name="twitter:title" content="React TinyLetter Component"/><meta name="twitter:description" content="Easily add subscription forms to your React apps!"/><meta name="twitter:image" content="https://jsbros.github.io/react-tinyletter/twitter-card.png"/><title>React TinyLetter Component</title><link rel="shortcut icon" href="/react-tinyletter/favicon.ico"/><link rel="stylesheet" href="/react-tinyletter/app.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/gruvbox-dark.min.css"/></head><body><div id="root"><div data-reactroot="" data-reactid="1" data-react-checksum="669245384"><div width="900px" class="bjikrE" data-reactid="2"><section class="cpodps jHuiZP" data-reactid="3"><div class="jAVKpJ" data-reactid="4"><img src="/react-tinyletter/banner.png" alt="React Logo" class="jzXZsK" data-reactid="5"/></div></section><section class="cpodps jHuiZP" data-reactid="6"><div class="jAVKpJ" data-reactid="7"><a href="https://github.com/jsbros/react-tinyletter" class="CqoRB" data-reactid="8">Visit GitHub</a><a href="/react-tinyletter/docs" class="CqoRB" data-reactid="9">View Documentation</a></div></section><section class="cpodps jHuiZP" data-reactid="10"><div class="jAVKpJ" data-reactid="11"><h2 class="kKDPag" data-reactid="12">Easily add subscription forms to your React apps!</h2><p data-reactid="13">The react-tinyletter component quickly generates the required &lt;form&gt; wrapper tags for TinyLetter email subscriptions, allowing you to focus on making kick-ass subscription forms.</p></div></section><section class="jHuiZP" data-reactid="14"><div class="cWzSkB" data-reactid="15"><pre data-reactid="16"><code class="jsx iffjtX" data-reactid="17">import React from &#x27;react&#x27;;
 import TinyLetter from &#x27;react-tinyletter&#x27;;
 
 function ComponentExample(props) {
   return (
-    &lt;TinyLetter list=&quot;JSBro&quot;&gt;
-      &lt;input type=&quot;email&quot;/&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot;/&gt;
-    &lt;/TinyLetter&gt;
+    &lt;TinyLetter list=&quot;YourTinyLetterUsername&quot;/&gt;
   );
 }
 
 React.render(&lt;ComponentExample/&gt;, document.getElementById(&#x27;app&#x27;));
 
-</code></pre></div><div class="cWzSkB" data-reactid="18"><h3 data-reactid="19">Preview</h3><div class="eYMYiw" data-reactid="20"><form action="https://tinyletter.com/JSBro" method="post" target="popupwindow" list="JSBro" data-reactid="21"><input type="hidden" value="1" name="embed" data-reactid="22"/><input type="email" name="email" required="" data-reactid="23"/><input type="submit" value="Subscribe" data-reactid="24"/></form></div><p data-reactid="25">Your form will be automatically populated with the correct action URL and hidden inputs. Even though it&#x27;s unstyled, it&#x27;s ready for use!</p></div></section><section class="cpodps jHuiZP" data-reactid="26"><div class="jAVKpJ" data-reactid="27"><h2 class="kKDPag" data-reactid="28">Beautify your form with styled-components!</h2></div></section><section class="jHuiZP" data-reactid="29"><div class="cWzSkB" data-reactid="30"><pre data-reactid="31"><code class="jsx iffjtX" data-reactid="32">import React from &#x27;react&#x27;;
+</code></pre></div><div class="cWzSkB" data-reactid="18"><h3 data-reactid="19">Preview</h3><div class="eYMYiw" data-reactid="20"><form action="https://tinyletter.com/JSBro" method="post" target="popupwindow" list="JSBro" data-reactid="21"><input type="hidden" value="1" name="embed" data-reactid="22"/><div data-reactid="23"><input type="email" placeholder="email@site.com" required="" data-reactid="24"/><input type="submit" value="Subscribe" data-reactid="25"/></div></form></div><p data-reactid="26">Your form will be automatically populated with the correct action URL and hidden inputs. Even though it&#x27;s unstyled, it&#x27;s ready for use!</p></div></section><section class="cpodps jHuiZP" data-reactid="27"><div class="jAVKpJ" data-reactid="28"><h2 class="kKDPag" data-reactid="29">Beautify your form with styled-components!</h2></div></section><section class="jHuiZP" data-reactid="30"><div class="cWzSkB" data-reactid="31"><pre data-reactid="32"><code class="jsx iffjtX" data-reactid="33">import React from &#x27;react&#x27;;
 import styled from &#x27;styled-components&#x27;;
-import TinyLetter from &#x27;react-tinyletter&#x27;;
+import { TinyLetter, Email, Submit } from &#x27;react-tinyletter&#x27;;
 
-const Input = styled.input`
-  border: 1px solid #ccc;
-  border-radius: 3px;
+const Input = css`
   box-sizing: border-box;
-  float: left;
+  box-shadow: none;
   height: 45px;
+  border-radius: 5px;
+  float: left;
   padding: 8px;
   &amp;:focus {
-    border: 1px solid deepskyblue;
-    box-shadow: none;
+    border-color: deepskyblue;
     outline: none;
   }
 `;
 
-const Email = styled(Input)`
-  border-top-right-radius: 0;
+const StyledEmail = styled(Email)`
+  ${Input}
   border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border: 1px solid #ccc;
   font-size: 18px;
   font-weight: 100;
   width: 70%;
 `;
 
-const Submit = styled(Input)`
+const StyledSubmit = styled(Submit)`
+  ${Input}
   background: transparent;
+  border-bottom-left-radius: 0;
   border-left: none;
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border: 1px solid #ccc;
   width: 30%;
   &amp;:hover {
     background-color: #ccc;
@@ -54,14 +54,15 @@ const Submit = styled(Input)`
   }
 `;
 
+
 function ComponentExample(props) {
   return (
-    &lt;TinyLetter list=&quot;JSBro&quot;&gt;
-      &lt;Email type=&quot;email&quot;/&gt;
-      &lt;Submit type=&quot;submit&quot; value=&quot;Subscribe&quot;/&gt;
+    &lt;TinyLetter list=&quot;TinyLetterUsername&quot;&gt;
+      &lt;StyledEmail/&gt;
+      &lt;StyledSubmit/&gt;
     &lt;/TinyLetter&gt;
   );
 }
 
 React.render(&lt;ComponentExample/&gt;, document.getElementById(&#x27;app&#x27;));
-</code></pre></div><div class="cWzSkB" data-reactid="33"><h3 data-reactid="34">Preview</h3><div class="eYMYiw" data-reactid="35"><form action="https://tinyletter.com/JSBro" method="post" target="popupwindow" list="JSBro" data-reactid="36"><input type="hidden" value="1" name="embed" data-reactid="37"/><input type="email" name="email" required="" class="ctpwtC" data-reactid="38"/><input type="submit" value="Subscribe" class="eeSIvf" data-reactid="39"/></form></div></div></section><section class="cpodps jHuiZP" data-reactid="40"><div class="jAVKpJ" data-reactid="41"><hr data-reactid="42"/><!-- react-text: 43 -->Built with ❤️  by <!-- /react-text --><a href="https://twitter.com/garetmckinley" class="igdOfU" data-reactid="44">Garet McKinley</a></div></section></div></div></div><script src="/react-tinyletter/app.js"></script></body></html>
+</code></pre></div><div class="cWzSkB" data-reactid="34"><h3 data-reactid="35">Preview</h3><div class="eYMYiw" data-reactid="36"><form action="https://tinyletter.com/JSBro" method="post" target="popupwindow" list="JSBro" data-reactid="37"><input type="hidden" value="1" name="embed" data-reactid="38"/><input type="email" placeholder="email@site.com" required="" class="fycEqo" data-reactid="39"/><input type="submit" value="Subscribe" class="lmsPlm" data-reactid="40"/></form></div></div></section><section class="cpodps jHuiZP" data-reactid="41"><div class="jAVKpJ" data-reactid="42"><hr data-reactid="43"/><!-- react-text: 44 -->Built with ❤️  by <!-- /react-text --><a href="https://twitter.com/garetmckinley" class="igdOfU" data-reactid="45">Garet McKinley</a></div></section></div></div></div><script src="/react-tinyletter/app.js"></script></body></html>
