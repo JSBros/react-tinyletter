@@ -1,6 +1,6 @@
 {
   "name": "react-tinyletter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Easily add a TinyLetter subscription form to your React apps",
   "main": "dist/react-tinyletter.js",
   "author": "Garet McKinley",
