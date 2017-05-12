@@ -49,7 +49,7 @@ export default {
   exports: 'named',
   external: ['react'],
   globals: { react: 'React' },
-  moduleName: 'hedron',
+  moduleName: 'react_tinyletter',
   plugins,
   targets,
 }
