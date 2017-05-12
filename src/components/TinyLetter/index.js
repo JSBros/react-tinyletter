@@ -50,7 +50,7 @@ import { Email, Submit } from '../'
  */
 function TinyLetter(props) {
   function subscribe() {
-    window.open(`httpsd://tinyletter.com/${props.list}`,
+    window.open(`https://tinyletter.com/${props.list}`,
         'popupwindow', 'scrollbars=yes,width=800,height=600')
     return true
   }
