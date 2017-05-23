@@ -41,8 +41,6 @@
     "eslint": "^3.10.2",
     "eslint-config-xo-react": "^0.10.0",
     "eslint-plugin-react": "^6.7.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.4.1",
     "rollup": "^0.36.3",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^5.0.5",
@@ -52,7 +50,9 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "react": "^15.3.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-dom": "^15.4.1",
     "styled-components": "^1.0.10"
   }
 }

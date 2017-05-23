@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react'
 import styled from 'styled-components'
 
@@ -21,8 +22,8 @@ function Email(props) {
 }
 
 Email.propTypes = {
-  placeholder: React.PropTypes.string,
-  className: React.PropTypes.string,
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default Email

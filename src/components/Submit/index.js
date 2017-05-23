@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 
@@ -20,7 +21,7 @@ function Submit(props) {
 }
 
 Submit.propTypes = {
-  title: React.PropTypes.string,
+  title: PropTypes.string,
 }
 
 export default Submit;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react'
 import { Email, Submit } from '../'
 
@@ -77,8 +78,8 @@ function TinyLetter(props) {
 }
 
 TinyLetter.propTypes = {
-  children: React.PropTypes.node,
-  list: React.PropTypes.string,
+  children: PropTypes.node,
+  list: PropTypes.string,
 }
 
 export default TinyLetter
