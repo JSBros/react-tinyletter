@@ -53,6 +53,6 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.4.1",
-    "styled-components": "^1.0.10"
+    "styled-components": "^1.4.6"
   }
 }
